@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Class Parameter
  * @package GepurIt\ParameterBugBundle\Entity
  *
- * @ORM\Table(name="client_email_parameter")
+ * @ORM\Table(name="parameter_bag")
  * @ORM\Entity(repositoryClass="GepurIt\ParameterBugBundle\Repository\ParameterRepository")
  * @ORM\HasLifecycleCallbacks()
  */
