@@ -6,7 +6,7 @@
 
 namespace GepurIt\ParameterBugBundle\ParameterBug;
 
-use AppBundle\Entity\Parameter;
+use GepurIt\ParameterBugBundle\Entity\Parameter;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 
