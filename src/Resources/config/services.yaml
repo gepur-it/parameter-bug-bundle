@@ -1,0 +1,8 @@
+services:
+  GepurIt\ParameterBugBundle\ParameterBug\ParameterBug:
+    autowire: true
+    class: GepurIt\ParameterBugBundle\ParameterBug\ParameterBug
+    public: true
+
+  app.parameter_bug:
+    alias: GepurIt\ParameterBugBundle\ParameterBug\ParameterBug

@@ -1,0 +1,53 @@
+{
+    "name": "gepur-it/parameter-bug-bundle",
+    "description": "Parameter bug bundle",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Marina Mileva",
+            "email": "m934222258@gmail.com"
+        },
+        {
+            "name": "Victor Pavlov",
+            "email": "zogxray@gmail.com"
+        },
+        {
+            "name": "Andrii Yakovlev",
+            "email": "yawa20@gmail.com"
+        }
+    ],
+    "keywords": [
+        "parameter",
+        "gepur",
+        "email"
+    ],
+    "homepage": "https://github.com/gepur-it/parameter-bug-bundle",
+    "require": {
+        "php": "^7.1",
+        "doctrine/orm": "^2.5",
+        "doctrine/doctrine-bundle": "^1.6"
+    },
+    "require-dev": {
+        "doctrine/orm": "^2.5",
+        "doctrine/doctrine-bundle": "^1.6",
+        "phpunit/phpunit": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "GepurIt\\ParameterBugBundle\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GepurIt\\ParameterBugBundle\\Tests\\": "Tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "master"
+        }
+    },
+    "minimum-stability": "dev"
+}
