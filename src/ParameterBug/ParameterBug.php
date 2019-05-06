@@ -63,12 +63,7 @@ class ParameterBug
      */
     public function save(string $name, $value)
     {
-        $loadedParam = $this->entityManager->find(Parameter::class, $name);
-        if (null === $loadedParam) {
-            $loadedParam = new Parameter($name);
-        }
-        $loadedParam->setValue($value);
-        $this->entityManager->persist($loadedParam);
+        $loadedParam = $this->push($name, $value);
         $this->entityManager->flush($loadedParam);
     }
 
@@ -79,5 +74,23 @@ class ParameterBug
     public function set(string $name, $value)
     {
         $this->save($name, $value);
+    }
+
+    /**
+     * @param string $name
+     * @param $value
+     * @return Parameter
+     */
+    public function push(string $name, $value)
+    {
+        $loadedParam = $this->entityManager->find(Parameter::class, $name);
+        if (null === $loadedParam) {
+            $loadedParam = new Parameter($name);
+            $this->entityManager->persist($loadedParam);
+        }
+
+        $loadedParam->setValue($value);
+
+        return $loadedParam;
     }
 }
